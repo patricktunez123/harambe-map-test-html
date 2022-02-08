@@ -10,6 +10,7 @@ $(function () {
       lat: $("#lat").val(),
       lng: $("#lng").val(),
       title: $("#placeName").val(),
+      userName: $("#userName").val(),
     };
     markers.push(marker);
 
@@ -18,6 +19,7 @@ $(function () {
         .gmap("addMarker", {
           position: new google.maps.LatLng(m.lat, m.lng),
           title: m.title,
+          userName: m.userName,
         })
         .click(function () {
           var contentString =
@@ -30,6 +32,9 @@ $(function () {
             "</td></tr>" +
             "<tr><td>Longitude : </td><td>" +
             m.lng +
+            "</td></tr>" +
+            "<tr><td>Registered user : </td><td>" +
+            m.userName +
             "</td></tr>" +
             "</table>";
           $("#googleMap").gmap(
