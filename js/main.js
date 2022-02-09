@@ -59,7 +59,7 @@ $(function () {
           $("#lat").val(results[0].geometry.location.lat().toFixed(6));
           $("#lng").val(results[0].geometry.location.lng().toFixed(6));
         } else {
-          alert("Please enter correct place name");
+          alert("Provide the API key.");
         }
       }
     );
